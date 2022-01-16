@@ -473,7 +473,7 @@ end
 
 -- Scripts:
 
-local function AGNDL_fake_script() -- OpenClose.LocalScript 
+local function MKZHX_fake_script() -- OpenClose.LocalScript 
 	local script = Instance.new('LocalScript', OpenClose)
 	local req = require
 	local require = function(obj)
@@ -501,8 +501,8 @@ local function AGNDL_fake_script() -- OpenClose.LocalScript
 		end
 	end)
 end
-coroutine.wrap(AGNDL_fake_script)()
-local function ULVERF_fake_script() -- Buttons.LocalScript 
+coroutine.wrap(MKZHX_fake_script)()
+local function HRHM_fake_script() -- Buttons.LocalScript 
 	local script = Instance.new('LocalScript', Buttons)
 	local req = require
 	local require = function(obj)
@@ -530,8 +530,8 @@ local function ULVERF_fake_script() -- Buttons.LocalScript
 		end
 	end
 end
-coroutine.wrap(ULVERF_fake_script)()
-local function XOEOLV_fake_script() -- TextLabel_2.LocalScript 
+coroutine.wrap(HRHM_fake_script)()
+local function IXPU_fake_script() -- TextLabel_2.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel_2)
 	local req = require
 	local require = function(obj)
@@ -545,8 +545,8 @@ local function XOEOLV_fake_script() -- TextLabel_2.LocalScript
 	
 	script.Parent.Text = "Welcome to Elixir Hub " .. game.Players.LocalPlayer.Name .. "!"
 end
-coroutine.wrap(XOEOLV_fake_script)()
-local function PLQU_fake_script() -- nil.CircleClickExample 
+coroutine.wrap(IXPU_fake_script)()
+local function MUNIHNJ_fake_script() -- nil.CircleClickExample 
 	local script = Instance.new('LocalScript', nil)
 	local req = require
 	local require = function(obj)
@@ -567,8 +567,8 @@ local function PLQU_fake_script() -- nil.CircleClickExample
 	
 	
 end
-coroutine.wrap(PLQU_fake_script)()
-local function XOOHJF_fake_script() -- Aerethus.LocalScript 
+coroutine.wrap(MUNIHNJ_fake_script)()
+local function KMQNEB_fake_script() -- Aerethus.LocalScript 
 	local script = Instance.new('LocalScript', Aerethus)
 	local req = require
 	local require = function(obj)
@@ -1010,8 +1010,8 @@ local function XOOHJF_fake_script() -- Aerethus.LocalScript
 		FEScript()
 	end)
 end
-coroutine.wrap(XOOHJF_fake_script)()
-local function RTAKMV_fake_script() -- ImageButton.LocalScript 
+coroutine.wrap(KMQNEB_fake_script)()
+local function BNQTK_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 	local req = require
 	local require = function(obj)
@@ -1049,8 +1049,8 @@ local function RTAKMV_fake_script() -- ImageButton.LocalScript
 		end
 	end)
 end
-coroutine.wrap(RTAKMV_fake_script)()
-local function WQKPMDZ_fake_script() -- TextLabel_4.LocalScript 
+coroutine.wrap(BNQTK_fake_script)()
+local function GCORN_fake_script() -- TextLabel_4.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel_4)
 	local req = require
 	local require = function(obj)
@@ -1066,9 +1066,9 @@ local function WQKPMDZ_fake_script() -- TextLabel_4.LocalScript
 		script.Parent.TextTransparency = script.Parent.BackgroundTransparency
 	end
 end
-coroutine.wrap(WQKPMDZ_fake_script)()
+coroutine.wrap(GCORN_fake_script)()
 -- Button.Script is disabled.
-local function HBKTM_fake_script() -- Content.Main Handler 
+local function PDRD_fake_script() -- Content.Main Handler 
 	local script = Instance.new('LocalScript', Content)
 	local req = require
 	local require = function(obj)
@@ -1144,8 +1144,8 @@ local function HBKTM_fake_script() -- Content.Main Handler
 		end
 	end)
 end
-coroutine.wrap(HBKTM_fake_script)()
-local function RSBZVQ_fake_script() -- Frame.Dragify 
+coroutine.wrap(PDRD_fake_script)()
+local function MMNFZPP_fake_script() -- Frame.Dragify 
 	local script = Instance.new('LocalScript', Frame)
 	local req = require
 	local require = function(obj)
@@ -1194,4 +1194,4 @@ local function RSBZVQ_fake_script() -- Frame.Dragify
 	
 	dragify(script.Parent)
 end
-coroutine.wrap(RSBZVQ_fake_script)()
+coroutine.wrap(MMNFZPP_fake_script)()
