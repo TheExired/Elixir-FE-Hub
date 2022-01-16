@@ -1,0 +1,1197 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ElixirFEHub = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Topbar = Instance.new("Frame")
+local ImageLabel = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
+local OpenClose = Instance.new("TextButton")
+local block = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local Sidebar = Instance.new("Frame")
+local Buttons = Instance.new("Frame")
+local UIListLayout = Instance.new("UIListLayout")
+local Home = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local ScriptHub = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local Settings = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local UICorner_6 = Instance.new("UICorner")
+local TabsHolder = Instance.new("Frame")
+local Home_2 = Instance.new("Frame")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+local UICorner_7 = Instance.new("UICorner")
+local ImageLabel_2 = Instance.new("ImageLabel")
+local ScriptHub_2 = Instance.new("Frame")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local UIListLayout_2 = Instance.new("UIListLayout")
+local Aerethus = Instance.new("TextButton")
+local Circle = Instance.new("ImageLabel")
+local UICorner_8 = Instance.new("UICorner")
+local ImageButton = Instance.new("ImageButton")
+local TextLabel_4 = Instance.new("TextLabel")
+local UICorner_9 = Instance.new("UICorner")
+local UICorner_10 = Instance.new("UICorner")
+local Settings_2 = Instance.new("Frame")
+local ScrollingFrame_2 = Instance.new("ScrollingFrame")
+local UIListLayout_3 = Instance.new("UIListLayout")
+local MatureContent = Instance.new("Frame")
+local TextLabel_5 = Instance.new("TextLabel")
+local Content = Instance.new("Frame")
+local Holder = Instance.new("Frame")
+local Circle_2 = Instance.new("Frame")
+local UICorner_11 = Instance.new("UICorner")
+local Mini = Instance.new("Frame")
+local UICorner_12 = Instance.new("UICorner")
+local UICorner_13 = Instance.new("UICorner")
+local UIPadding = Instance.new("UIPadding")
+local Button = Instance.new("TextButton")
+local UICorner_14 = Instance.new("UICorner")
+local UICorner_15 = Instance.new("UICorner")
+local UICorner_16 = Instance.new("UICorner")
+local Folder = Instance.new("Folder")
+
+--Properties:
+
+ElixirFEHub.Name = "ElixirFEHub"
+ElixirFEHub.Parent = game.Workspace.LocalScript
+ElixirFEHub.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ElixirFEHub
+Frame.BackgroundColor3 = Color3.fromRGB(51, 51, 51)
+Frame.Position = UDim2.new(0.336212218, 0, 0.235834569, 0)
+Frame.Size = UDim2.new(0.327575564, 0, 0.52679944, 0)
+
+UICorner.Parent = Frame
+
+Topbar.Name = "Topbar"
+Topbar.Parent = Frame
+Topbar.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+Topbar.BorderSizePixel = 0
+Topbar.Size = UDim2.new(1, 0, 0.0906344503, 0)
+
+ImageLabel.Parent = Topbar
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.Size = UDim2.new(0.06161616, 0, 1, 0)
+ImageLabel.Image = "http://www.roblox.com/asset/?id=8537213922"
+
+TextLabel.Parent = Topbar
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.0939393938, 0, 0, 0)
+TextLabel.Size = UDim2.new(0.813131332, 0, 1, 0)
+TextLabel.Font = Enum.Font.ArialBold
+TextLabel.Text = "Elixir FE Hub - V1.0.0"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 20.000
+TextLabel.TextWrapped = true
+
+OpenClose.Name = "OpenClose"
+OpenClose.Parent = Topbar
+OpenClose.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OpenClose.BackgroundTransparency = 1.000
+OpenClose.BorderSizePixel = 0
+OpenClose.Position = UDim2.new(0.937373698, 0, 0, 0)
+OpenClose.Size = UDim2.new(0.0606060699, 0, 1, 0)
+OpenClose.Font = Enum.Font.SourceSans
+OpenClose.Text = "-"
+OpenClose.TextColor3 = Color3.fromRGB(255, 255, 255)
+OpenClose.TextScaled = true
+OpenClose.TextSize = 14.000
+OpenClose.TextWrapped = true
+
+block.Name = "block"
+block.Parent = Topbar
+block.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+block.BorderSizePixel = 0
+block.Position = UDim2.new(0, 0, 0.352810025, 0)
+block.Size = UDim2.new(1, 0, 0.647190988, 0)
+block.ZIndex = 0
+
+UICorner_2.Parent = Topbar
+
+Sidebar.Name = "Sidebar"
+Sidebar.Parent = Frame
+Sidebar.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+Sidebar.BorderSizePixel = 0
+Sidebar.Position = UDim2.new(0.0141414208, 0, 0.111782417, 0)
+Sidebar.Size = UDim2.new(0.197774366, 0, 0.867069542, 0)
+
+Buttons.Name = "Buttons"
+Buttons.Parent = Sidebar
+Buttons.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Buttons.BackgroundTransparency = 1.000
+Buttons.Position = UDim2.new(0.0483870953, 0, 0.0209059231, 0)
+Buttons.Size = UDim2.new(0.90322578, 0, 0.958188176, 0)
+
+UIListLayout.Parent = Buttons
+UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0, 5)
+
+Home.Name = "Home"
+Home.Parent = Buttons
+Home.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
+Home.BorderSizePixel = 0
+Home.Position = UDim2.new(-0.011306175, 0, 0, 0)
+Home.Size = UDim2.new(0, 92, 0, 34)
+Home.Font = Enum.Font.SourceSans
+Home.Text = "Home"
+Home.TextColor3 = Color3.fromRGB(255, 255, 255)
+Home.TextSize = 20.000
+
+UICorner_3.Parent = Home
+
+ScriptHub.Name = "ScriptHub"
+ScriptHub.Parent = Buttons
+ScriptHub.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
+ScriptHub.BorderSizePixel = 0
+ScriptHub.Position = UDim2.new(-0.011306175, 0, 0.136458755, 0)
+ScriptHub.Size = UDim2.new(0, 92, 0, 34)
+ScriptHub.Font = Enum.Font.SourceSans
+ScriptHub.Text = "Scripts"
+ScriptHub.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScriptHub.TextSize = 20.000
+
+UICorner_4.Parent = ScriptHub
+
+Settings.Name = "Settings"
+Settings.Parent = Buttons
+Settings.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
+Settings.BorderSizePixel = 0
+Settings.Position = UDim2.new(-0.011306175, 0, 0.272917509, 0)
+Settings.Size = UDim2.new(0, 92, 0, 34)
+Settings.Font = Enum.Font.SourceSans
+Settings.Text = "Settings"
+Settings.TextColor3 = Color3.fromRGB(255, 255, 255)
+Settings.TextSize = 20.000
+
+UICorner_5.Parent = Settings
+
+UICorner_6.Parent = Sidebar
+
+TabsHolder.Name = "TabsHolder"
+TabsHolder.Parent = Frame
+TabsHolder.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+TabsHolder.BorderSizePixel = 0
+TabsHolder.ClipsDescendants = true
+TabsHolder.Position = UDim2.new(0.226057202, 0, 0.111782417, 0)
+TabsHolder.Size = UDim2.new(0.759801447, 0, 0.867069542, 0)
+
+Home_2.Name = "Home"
+Home_2.Parent = TabsHolder
+Home_2.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Home_2.BorderSizePixel = 0
+Home_2.ClipsDescendants = true
+Home_2.Position = UDim2.new(-0.0772397071, 0, -0.00320009422, 0)
+Home_2.Size = UDim2.new(1.07723975, 0, 1, 0)
+
+TextLabel_2.Parent = Home_2
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.112452842, 0, 0.376306444, 0)
+TextLabel_2.Size = UDim2.new(0.837474942, 0, 0.57811296, 0)
+TextLabel_2.Font = Enum.Font.ArialBold
+TextLabel_2.Text = "Welcome to Elixir Hub!"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 20.000
+TextLabel_2.TextWrapped = true
+TextLabel_2.TextYAlignment = Enum.TextYAlignment.Top
+
+TextLabel_3.Parent = Home_2
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0.112452842, 0, 0.800305784, 0)
+TextLabel_3.Size = UDim2.new(0.837474942, 0, 0.15411377, 0)
+TextLabel_3.Font = Enum.Font.ArialBold
+TextLabel_3.Text = "Discord: https://discord.gg/EbGPemwR6D"
+TextLabel_3.TextColor3 = Color3.fromRGB(80, 150, 255)
+TextLabel_3.TextSize = 20.000
+TextLabel_3.TextWrapped = true
+TextLabel_3.TextYAlignment = Enum.TextYAlignment.Top
+
+UICorner_7.Parent = Home_2
+
+ImageLabel_2.Parent = Home_2
+ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_2.BackgroundTransparency = 1.000
+ImageLabel_2.Position = UDim2.new(0.415960729, 0, 0.0522647612, 0)
+ImageLabel_2.Size = UDim2.new(0.2283196, 0, 0.324041665, 0)
+ImageLabel_2.Image = "http://www.roblox.com/asset/?id=8537213922"
+
+ScriptHub_2.Name = "ScriptHub"
+ScriptHub_2.Parent = TabsHolder
+ScriptHub_2.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+ScriptHub_2.BorderSizePixel = 0
+ScriptHub_2.ClipsDescendants = true
+ScriptHub_2.Position = UDim2.new(1.01999998, 0, -0.00320009259, 0)
+ScriptHub_2.Size = UDim2.new(1, 0, 1, 0)
+
+ScrollingFrame.Parent = ScriptHub_2
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.BackgroundTransparency = 1.000
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Size = UDim2.new(1, 0, 1, 0)
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 8, 0)
+
+UIListLayout_2.Parent = ScrollingFrame
+UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_2.Padding = UDim.new(0, 2)
+
+Aerethus.Name = "Aerethus"
+Aerethus.Parent = ScrollingFrame
+Aerethus.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+Aerethus.BorderSizePixel = 0
+Aerethus.Position = UDim2.new(0, 0, 5.11573077e-08, 0)
+Aerethus.Size = UDim2.new(0.956653595, 0, 0, 40)
+Aerethus.ZIndex = 6
+Aerethus.AutoButtonColor = false
+Aerethus.Font = Enum.Font.GothamSemibold
+Aerethus.Text = "Aerethus"
+Aerethus.TextColor3 = Color3.fromRGB(255, 255, 255)
+Aerethus.TextSize = 14.000
+
+Circle.Name = "Circle"
+Circle.Parent = game.Workspace.LocalScript.ElixirFEHub.Frame.TabsHolder.ScriptHub.ScrollingFrame.Aerethus.CircleClick
+Circle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Circle.BackgroundTransparency = 1.000
+Circle.ZIndex = 10
+Circle.Image = "rbxassetid://266543268"
+Circle.ImageColor3 = Color3.fromRGB(0, 0, 0)
+Circle.ImageTransparency = 0.900
+
+UICorner_8.Parent = Aerethus
+
+ImageButton.Parent = Aerethus
+ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton.BackgroundTransparency = 1.000
+ImageButton.Position = UDim2.new(0.0181214139, 0, 0.0479591377, 0)
+ImageButton.Size = UDim2.new(0, 35, 0, 34)
+ImageButton.ZIndex = 9
+ImageButton.Image = "http://www.roblox.com/asset/?id=8537364986"
+ImageButton.ImageColor3 = Color3.fromRGB(130, 130, 130)
+
+TextLabel_4.Parent = Aerethus
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(37, 44, 60)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.Size = UDim2.new(1, 0, 1, 0)
+TextLabel_4.Visible = false
+TextLabel_4.ZIndex = 7
+TextLabel_4.Font = Enum.Font.GothamSemibold
+TextLabel_4.Text = "God of the shadows."
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.TextSize = 14.000
+
+UICorner_9.Parent = TextLabel_4
+
+UICorner_10.Parent = ScriptHub_2
+
+Settings_2.Name = "Settings"
+Settings_2.Parent = TabsHolder
+Settings_2.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Settings_2.BorderSizePixel = 0
+Settings_2.ClipsDescendants = true
+Settings_2.Position = UDim2.new(1.01999998, 0, -0.00320009259, 0)
+Settings_2.Size = UDim2.new(1, 0, 1, 0)
+
+ScrollingFrame_2.Parent = Settings_2
+ScrollingFrame_2.Active = true
+ScrollingFrame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame_2.BackgroundTransparency = 1.000
+ScrollingFrame_2.BorderSizePixel = 0
+ScrollingFrame_2.Size = UDim2.new(1, 0, 1, 0)
+ScrollingFrame_2.CanvasSize = UDim2.new(0, 0, 4, 0)
+
+UIListLayout_3.Parent = ScrollingFrame_2
+UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_3.Padding = UDim.new(0, 2)
+
+MatureContent.Name = "MatureContent"
+MatureContent.Parent = ScrollingFrame_2
+MatureContent.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
+MatureContent.BorderSizePixel = 0
+MatureContent.Size = UDim2.new(0.94599998, 0, 0, 40)
+
+TextLabel_5.Parent = MatureContent
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.BorderSizePixel = 0
+TextLabel_5.Size = UDim2.new(0.351000011, 0, 1, 0)
+TextLabel_5.Font = Enum.Font.SourceSans
+TextLabel_5.Text = "Mature Content"
+TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.TextScaled = true
+TextLabel_5.TextSize = 14.000
+TextLabel_5.TextWrapped = true
+
+Content.Name = "Content"
+Content.Parent = TextLabel_5
+Content.AnchorPoint = Vector2.new(0.5, 0.5)
+Content.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
+Content.BackgroundTransparency = 1.000
+Content.BorderSizePixel = 0
+Content.Position = UDim2.new(2.44895625, 0, 0.514410377, 0)
+Content.Size = UDim2.new(1.2495358, 0, 1.71710145, 0)
+
+Holder.Name = "Holder"
+Holder.Parent = Content
+Holder.AnchorPoint = Vector2.new(0.5, 0.5)
+Holder.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+Holder.BorderSizePixel = 0
+Holder.Position = UDim2.new(0.5, 0, 0.5, 0)
+Holder.Size = UDim2.new(0.278787881, 0, 0.360000014, 0)
+
+Circle_2.Name = "Circle"
+Circle_2.Parent = Holder
+Circle_2.AnchorPoint = Vector2.new(0, 0.5)
+Circle_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Circle_2.Position = UDim2.new(0, 0, 0.5, 0)
+Circle_2.Size = UDim2.new(0.5, 0, 1, 0)
+
+UICorner_11.CornerRadius = UDim.new(0, 100)
+UICorner_11.Parent = Circle_2
+
+Mini.Name = "Mini"
+Mini.Parent = Circle_2
+Mini.AnchorPoint = Vector2.new(0.5, 0.5)
+Mini.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+Mini.Position = UDim2.new(0.5, 0, 0.5, 0)
+Mini.Size = UDim2.new(0.5, 0, 0.5, 0)
+
+UICorner_12.CornerRadius = UDim.new(0, 100)
+UICorner_12.Parent = Mini
+
+UICorner_13.CornerRadius = UDim.new(0, 100)
+UICorner_13.Parent = Holder
+
+UIPadding.Parent = Holder
+UIPadding.PaddingBottom = UDim.new(0, 4)
+UIPadding.PaddingLeft = UDim.new(0, 4)
+UIPadding.PaddingRight = UDim.new(0, 4)
+UIPadding.PaddingTop = UDim.new(0, 4)
+
+Button.Name = "Button"
+Button.Parent = Holder
+Button.AnchorPoint = Vector2.new(0.5, 0.5)
+Button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Button.BackgroundTransparency = 1.000
+Button.BorderSizePixel = 0
+Button.Position = UDim2.new(0.5, 0, 0.5, 0)
+Button.Size = UDim2.new(1.10000002, 0, 1.25, 0)
+Button.Font = Enum.Font.SourceSans
+Button.Text = ""
+Button.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button.TextSize = 14.000
+
+UICorner_14.Parent = MatureContent
+
+UICorner_15.Parent = Settings_2
+
+UICorner_16.Parent = TabsHolder
+
+Folder.Parent = Frame
+
+-- Module Scripts:
+
+local fake_module_scripts = {}
+
+do -- Aerethus.CircleClick
+	local script = Instance.new('ModuleScript', Aerethus)
+	script.Name = "CircleClick"
+	local function module_script()
+		function CircleClick(Button, X, Y)
+			coroutine.resume(coroutine.create(function()
+				
+				Button.ClipsDescendants = true
+				
+				local Circle = script:WaitForChild("Circle"):Clone()
+					Circle.Parent = Button
+					local NewX = X - Circle.AbsolutePosition.X
+					local NewY = Y - Circle.AbsolutePosition.Y
+					Circle.Position = UDim2.new(0, NewX, 0, NewY)
+				
+				local Size = 0
+					if Button.AbsoluteSize.X > Button.AbsoluteSize.Y then
+						 Size = Button.AbsoluteSize.X*1.5
+					elseif Button.AbsoluteSize.X < Button.AbsoluteSize.Y then
+						 Size = Button.AbsoluteSize.Y*1.5
+					elseif Button.AbsoluteSize.X == Button.AbsoluteSize.Y then																										Size = Button.AbsoluteSize.X*1.5
+					end
+				
+				local Time = 0.5
+					Circle:TweenSizeAndPosition(UDim2.new(0, Size, 0, Size), UDim2.new(0.5, -Size/2, 0.5, -Size/2), "Out", "Quad", Time, false, nil)
+					for i=1,10 do
+						Circle.ImageTransparency = Circle.ImageTransparency + 0.01
+						wait(Time/10)
+					end
+					Circle:Destroy()
+					
+			end))
+		end
+		
+		return CircleClick
+	end
+	fake_module_scripts[script] = module_script
+end
+do -- Button.MainModule
+	local script = Instance.new('ModuleScript', Button)
+	script.Name = "MainModule"
+	local function module_script()
+		local ChangeValue = {}
+		activated = false
+		function ChangeValue:CV(player, toggle)
+			player = game.Players:WaitForChild(player)
+			local SS = player.PlayerGui.SynapseHub
+			local Config = SS.Main.Config
+			
+			if activated == false then
+				activated = true
+				script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Config[script.Parent.Parent.Parent.Parent.Parent.Name].Value = true
+			elseif activated == true then
+				activated = false
+				script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Config[script.Parent.Parent.Parent.Parent.Parent.Name].Value = false
+				end
+		end
+		
+		return ChangeValue
+		
+	end
+	fake_module_scripts[script] = module_script
+end
+
+
+-- Scripts:
+
+local function AGNDL_fake_script() -- OpenClose.LocalScript 
+	local script = Instance.new('LocalScript', OpenClose)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
+
+	local closed = false
+	script.Parent.MouseButton1Down:Connect(function()
+		if closed == false then
+			script.Parent.Parent.Parent.Main2.Visible = false
+			script.Parent.Parent.Parent.Sidebar.Visible = false
+			script.Parent.Parent.Parent.TabsHolder.Visible = false
+			script.Parent.Text = "+"
+			closed = true
+		elseif closed == true then
+			script.Parent.Parent.Parent.Main2.Visible = true
+			script.Parent.Parent.Parent.Sidebar.Visible = true
+			script.Parent.Parent.Parent.TabsHolder.Visible = true
+			script.Parent.Text = "-"
+			closed = false
+		end
+	end)
+end
+coroutine.wrap(AGNDL_fake_script)()
+local function ULVERF_fake_script() -- Buttons.LocalScript 
+	local script = Instance.new('LocalScript', Buttons)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
+
+	local tabs = script.Parent.Parent.Parent.TabsHolder
+	
+	for i,v in pairs(script.Parent:GetChildren()) do
+		if v:IsA("TextButton") then
+			v.MouseButton1Click:Connect(function()
+				if tabs:FindFirstChild(v.Name) then
+					tabs:FindFirstChild(v.Name):TweenPosition(UDim2.new(-0.002, 0,-0.006, 0),"Out","Quint", 0.7, true) -- position of your first page like home or something
+					for a,e in pairs(tabs:GetChildren()) do
+						if e.Name ~= v.Name then
+							e:TweenPosition(UDim2.new(0.998, 0,-0.003, 0),"Out","Quint", 0.5, true) -- position of the other pages for example executor or script hub
+						end
+					end
+				end
+			end)
+		end
+	end
+end
+coroutine.wrap(ULVERF_fake_script)()
+local function XOEOLV_fake_script() -- TextLabel_2.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_2)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
+
+	
+	script.Parent.Text = "Welcome to Elixir Hub " .. game.Players.LocalPlayer.Name .. "!"
+end
+coroutine.wrap(XOEOLV_fake_script)()
+local function PLQU_fake_script() -- nil.CircleClickExample 
+	local script = Instance.new('LocalScript', nil)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
+
+	local Mouse = game.Players.LocalPlayer:GetMouse()
+	local CircleClick = require(script.Parent)
+	
+	script.Parent.Parent.MouseButton1Down:connect(function()
+		CircleClick(script.Parent.Parent, Mouse.X, Mouse.Y) 
+	end)
+	
+	
+	
+end
+coroutine.wrap(PLQU_fake_script)()
+local function XOOHJF_fake_script() -- Aerethus.LocalScript 
+	local script = Instance.new('LocalScript', Aerethus)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
+
+	
+	local function FEScript()
+	
+	
+		local unanchoredparts = {}
+		local movers = {}
+		local toggle = true
+		local move = false
+		local Player = game:GetService("Players").LocalPlayer
+		local Character = Player.Character
+		local mov = {};
+		local mov2 = {};
+	
+		--//Settings//--
+	
+		FlingStrength = 16000
+	
+		game:GetService("RunService").RenderStepped:Connect(function()
+			Character.Head.CanCollide = false
+			Character.Torso.CanCollide = false
+			Character.HumanoidRootPart.CanCollide = false
+	
+		end)
+	
+		local runservice = game:GetService("RunService")
+	
+	
+	
+	
+	
+	
+		local Hats = {Hat1  = Character:WaitForChild("DualVoidScythe"),
+			Hat2  = Character:WaitForChild("Evil Aura"), 
+			Hat3  = Character:WaitForChild("Hat1"), 
+			Hat4  = Character:WaitForChild("Kate Hair"), 
+			Hat5  = Character:WaitForChild("LavanderHair"), 
+			Hat6  = Character:WaitForChild("MessyHair"), 
+			Hat7  = Character:WaitForChild("Pal Hair"), 
+			Hat8  = Character:WaitForChild("Pink Hair"), 
+			Hat9  = Character:WaitForChild("Starslayer Railgun"), 
+			Hat10  = Character:WaitForChild("Big Block"),
+		}
+	
+		local temp = Instance.new("BodyPosition")
+		temp.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
+		temp.Parent = Hats.Hat10.Handle
+	
+		local Fling = Instance.new("BodyThrust")
+		Fling.Parent = Hats.Hat10.Handle
+		Fling.Force = Vector3.new(FlingStrength,0,FlingStrength)
+		Fling.Location = Hats.Hat10.Handle.Position
+		Hats.Hat10.Handle.CanCollide = false
+	
+		--Dont touch below
+	
+		for i,v in next, Hats do
+			v.Handle.AccessoryWeld:Remove()
+			for _,mesh in next, v:GetDescendants() do
+				if mesh:IsA("SpecialMesh") or mesh:IsA("Mesh") then -- change mesh to Specialmesh if u want to destroy the mesh
+					if mesh.Parent.Parent.Name ~= "DualVoidScythe" and mesh.Parent.Parent.Name ~= "Starslayer Railgun" and mesh.Parent.Parent.Name ~= "Evil Aura" then
+						mesh:Remove()
+					end
+				end
+			end
+		end
+	
+		function ftp(str)
+			local pt = {};
+			if str ~= 'me' and str ~= 'random' then
+				for i, v in pairs(game.Players:GetPlayers()) do
+					if v.Name:lower():find(str:lower()) then
+						table.insert(pt, v);
+					end
+				end
+			elseif str == 'me' then
+				table.insert(pt, Player);
+			elseif str == 'random' then
+				table.insert(pt, game.Players:GetPlayers()[math.random(1, #game.Players:GetPlayers())]);
+			end
+			return pt;
+		end
+	
+		local function align(i,v)
+			local att0 = Instance.new("Attachment", i)
+			att0.Position = Vector3.new(0,0,0)
+			local att1 = Instance.new("Attachment", v)
+			att1.Position = Vector3.new(0,0,0)
+			local AP = Instance.new("AlignPosition", i)
+			AP.Attachment0 = att0
+			AP.Attachment1 = att1
+			AP.RigidityEnabled = false
+			AP.ReactionForceEnabled = false
+			AP.ApplyAtCenterOfMass = false
+			AP.MaxForce = 9999999
+			AP.MaxVelocity = math.huge
+			AP.Responsiveness = 65
+			local AO = Instance.new("AlignOrientation", i)
+			AO.Attachment0 = att0
+			AO.Attachment1 = att1
+			AO.ReactionTorqueEnabled = false
+			AO.PrimaryAxisOnly = false
+			AO.MaxTorque = 9999999
+			AO.MaxAngularVelocity = math.huge
+			AO.Responsiveness = 50
+		end
+	
+	
+		local function limbalign(i,v)
+			local att0 = Instance.new("Attachment", i)
+			att0.Position = Vector3.new(0,0,0)
+			att0.Name = "att0"
+			local att1 = Instance.new("Attachment", v)
+			att1.Name = "att1"
+			att1.Position = Vector3.new(0,0,0)
+			local AP = Instance.new("AlignPosition", i)
+			AP.Attachment0 = att0
+			AP.Attachment1 = att1
+			AP.RigidityEnabled = false
+			AP.ReactionForceEnabled = false
+			AP.ApplyAtCenterOfMass = false
+			AP.MaxForce = 9999999
+			AP.MaxVelocity = math.huge
+			AP.Responsiveness = 65
+			local AO = Instance.new("AlignOrientation", i)
+			AO.Attachment0 = att0
+			AO.Attachment1 = att1
+			AO.ReactionTorqueEnabled = false
+			AO.PrimaryAxisOnly = false
+			AO.MaxTorque = 9999999
+			AO.MaxAngularVelocity = math.huge
+			AO.Responsiveness = 50
+		end
+	
+	
+		--Dont touch above
+	
+		--Character Modelling
+	
+	
+	
+	
+		align(Hats.Hat9.Handle, Character["Left Arm"])
+		align(Hats.Hat2.Handle, Character["Torso"])
+		align(Hats.Hat1.Handle, Character["Right Arm"])
+		align(Hats.Hat10.Handle, Character["Head"])
+		--[Hats that won't be converted] ^
+	
+	
+		--[Tentacles]
+		align(Hats.Hat3.Handle, Character["Torso"])
+		align(Hats.Hat4.Handle, Character["Torso"])
+		align(Hats.Hat5.Handle, Character["Torso"])
+		align(Hats.Hat6.Handle, Character["Torso"])
+		align(Hats.Hat7.Handle, Character["Torso"])
+		align(Hats.Hat8.Handle, Character["Torso"])
+	
+		Hats.Hat3.Handle.Attachment.Position = Vector3.new(-0.15, 0.4, -1.2)
+		Hats.Hat8.Handle.Attachment.Position = Vector3.new(-0.15, 1.378, -2.45)
+		Hats.Hat2.Handle.Attachment.Position = Vector3.new(0, -4.5, 0.2)
+		Hats.Hat7.Handle.Attachment.Position = Vector3.new(0.15, 0.4, -1.2)
+		Hats.Hat1.Handle.Attachment.Position = Vector3.new(0, -0.819, 0.574)
+		Hats.Hat5.Handle.Attachment.Position = Vector3.new(0.15, 1.378, -2.45)
+		Hats.Hat4.Handle.Attachment.Position = Vector3.new(0.15, 3.43, -1.1)
+		Hats.Hat6.Handle.Attachment.Position = Vector3.new(-0.15, 3.43, -1.25)
+	
+		Hats.Hat10.Handle.Attachment.Position = Vector3.new(0,-999999,0)
+	
+	
+		--	align(Hats.Hat2.Handle, Character["Torso"])
+		--	align(Hats.Hat3.Handle, Character["Torso"])
+	
+	
+		--End of Character Modelling
+	
+		Hats.Hat1.Handle.Attachment.Rotation = Vector3.new(-35, 0, -180) 
+		Hats.Hat9.Handle.Attachment.Rotation = Vector3.new(90, -45, 90) 
+		Hats.Hat3.Handle.Attachment.Rotation = Vector3.new(50, 30, -15)
+		Hats.Hat7.Handle.Attachment.Rotation = Vector3.new(50, -30, 15)
+		Hats.Hat8.Handle.Attachment.Rotation = Vector3.new(80, 30, -15)
+		Hats.Hat5.Handle.Attachment.Rotation = Vector3.new(80, -30, 15)
+		Hats.Hat4.Handle.Attachment.Rotation = Vector3.new(140, -30, 15)
+		Hats.Hat6.Handle.Attachment.Rotation = Vector3.new(140, 30, -15)
+		Hats.Hat2.Handle.Attachment.Rotation = Vector3.new(10,0,0)
+	
+	
+	
+		Character:WaitForChild("Torso"):FindFirstChild("Attachment").Name = "Attachment1" -- make a new attachment to
+		Character:WaitForChild("Left Arm"):FindFirstChild("Attachment").Name = "Attachment2"
+		--Character:WaitForChild("Torso"):FindFirstChild("Attachment").Name = "Attachment2" 
+		--Character:WaitForChild("Torso"):FindFirstChild("Attachment").Name = "Attachment3" 
+	
+	
+		Character:WaitForChild("Torso").Attachment1.Position = Vector3.new(0, 0, 0)
+		Character:WaitForChild("Left Arm").Attachment2.Position = Vector3.new(0, 0, 0)
+		Character:WaitForChild("Starslayer Railgun").Handle.Attachment.Position = Vector3.new(-1.75, 0.75, 0)
+		--Character:WaitForChild("Torso").Attachment2.Position = Vector3.new(0, 0, 0)
+		--Character:WaitForChild("Torso").Attachment3.Position = Vector3.new(0, 0, 0)
+	
+		-- the mid value is up or down it depends it goes down if u have a minus infront of it and up if u dont
+		-- the last value is forwards or backwards if u put a minus infront of it it goes forward and if u remove the minus it goes backwards
+		-- the first value is to the side if u dont have minus and to the other side if u have minus im bad at explaining lol
+		--Character:WaitForChild("Torso").Attachment1.Position = Vector3.new(-0, 0, -0) -- position of hat2
+		-- Position or Rotation
+	
+	
+		local blacklisted="Head Torso HumanoidRootPart";
+		local limbs={};
+	
+		for i,v in next,Character:children() do
+			if (v.ClassName=="Part") and not blacklisted:find(v.Name) then
+				v:BreakJoints();
+				table.insert(limbs,v);
+			end
+		end
+	
+		game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(KeyPressed)
+			if KeyPressed ==  Enum.KeyCode.F then -- key to play animation
+	
+				if toggle == false then
+					--Hats.Hat1.Handle.Attachment.Position = Vector3.new(0,15,0) -- value for animation -- Position or Rotation
+					Hats.Hat3.Handle.Attachment.Rotation = Vector3.new(60, 30, -15)
+					Hats.Hat7.Handle.Attachment.Rotation = Vector3.new(60, -30, 15)
+					--Character:WaitForChild("Left Arm").Attachment2.Position = Vector3.new(15, 0, 0)
+					wait(0.5)
+					Hats.Hat3.Handle.Attachment.Rotation = Vector3.new(50, 30, -15)
+					Hats.Hat7.Handle.Attachment.Rotation = Vector3.new(-50, 30, -15)
+					--Character:WaitForChild("Torso").Attachment1.Position = Vector3.new(0,0,0) 	-- normal value  -- Position or Rotation
+					toggle = true
+				else
+	
+					toggle = false
+				end
+			elseif KeyPressed == "N" then
+				Character["Left Arm"]:BreakJoints();
+				while game:GetService("RunService")["Heartbeat"]:Wait() do
+					Character["Left Arm"].CFrame = Character["Left Arm"].CFrame*CFrame.new(0,Character["Left Arm"].CFrame*2,0);
+				end
+				--Hats.Hat10.Handle.Position = game.Players.LocalPlayer:GetMouse().Hit.p + Vector3.new(0,2,0)
+				--temp.Position = game.Players.LocalPlayer:GetMouse().Hit.p + Vector3.new(0,2,0)
+			end
+		end)
+	
+		--//Character Rigging//--
+	
+	
+		limbalign(Character["Right Leg"],Character["Torso"])
+		Character["Right Leg"].att0.Position = Vector3.new(-0.3, 1.45, 1)
+		Character["Right Leg"].att0.Rotation = Vector3.new(15,15,0)
+	
+		limbalign(Character["Left Leg"],Character["Torso"])
+		Character["Left Leg"].att0.Position = Vector3.new(0.5, 1.8, 0.6)
+		Character["Left Leg"].att0.Rotation = Vector3.new(15,-15,0)
+	
+		limbalign(Character["Left Arm"],Character["Torso"])
+		Character["Left Arm"].att0.Position = Vector3.new(1.119, 1.863, 0.164)
+		Character["Left Arm"].att0.Rotation = Vector3.new(-132,-27,-9.6)
+	
+		limbalign(Character["Right Arm"],Character["Torso"])
+		Character["Right Arm"].att0.Position = Vector3.new(-1.509, 0.004, -0.032)
+		Character["Right Arm"].att0.Rotation = Vector3.new(16,13,0)
+	
+		--limbalign(Character["Torso"],Character["HumanoidRootPart"])
+		--Character["Torso"].att0.Position = Vector3.new(0,5,0)
+		--Character["Torso"].att0.Rotation = Vector3.new(0,0,0)
+	
+		Character["Humanoid"].HipHeight = 2.5
+	
+		--//Player Animations//--
+	
+	
+		while true do
+			wait(.1)
+			--Hats.Hat3.Handle.Attachment.Rotation = 
+			Character:WaitForChild("Torso").Attachment1.Position = Vector3.new(0, -0.1, 0)
+			Hats.Hat3.Handle.Attachment.Rotation = Vector3.new(52, 30, -15)
+			Hats.Hat7.Handle.Attachment.Rotation = Vector3.new(52, -30, 15)
+			Hats.Hat8.Handle.Attachment.Rotation = Vector3.new(82, 30, -15)
+			Hats.Hat5.Handle.Attachment.Rotation = Vector3.new(82, -30, 15)
+			Hats.Hat4.Handle.Attachment.Rotation = Vector3.new(142, -30, 15)
+			Hats.Hat6.Handle.Attachment.Rotation = Vector3.new(142, 30, -15)
+			--//^ Hats ^//--
+	
+	
+	
+	
+			wait(.1)
+			Character:WaitForChild("Torso").Attachment1.Position = Vector3.new(0, -0.2, 0)
+			Hats.Hat3.Handle.Attachment.Rotation = Vector3.new(54, 30, -15)
+			Hats.Hat7.Handle.Attachment.Rotation = Vector3.new(54, -30, 15)
+			Hats.Hat8.Handle.Attachment.Rotation = Vector3.new(84, 30, -15)
+			Hats.Hat5.Handle.Attachment.Rotation = Vector3.new(84, -30, 15)
+			Hats.Hat4.Handle.Attachment.Rotation = Vector3.new(144, -30, 15)
+			Hats.Hat6.Handle.Attachment.Rotation = Vector3.new(144, 30, -15)
+			--//^ Hats ^//--
+	
+	
+	
+			wait(.1)
+			Character:WaitForChild("Torso").Attachment1.Position = Vector3.new(0, -0.3, 0)
+			Hats.Hat3.Handle.Attachment.Rotation = Vector3.new(56, 30, -15)
+			Hats.Hat7.Handle.Attachment.Rotation = Vector3.new(56, -30, 15)
+			Hats.Hat8.Handle.Attachment.Rotation = Vector3.new(86, 30, -15)
+			Hats.Hat5.Handle.Attachment.Rotation = Vector3.new(86, -30, 15)
+			Hats.Hat4.Handle.Attachment.Rotation = Vector3.new(146, -30, 15)
+			Hats.Hat6.Handle.Attachment.Rotation = Vector3.new(146, 30, -15)
+			--//^ Hats ^//--
+	
+	
+	
+	
+			wait(.1)
+			Character:WaitForChild("Torso").Attachment1.Position = Vector3.new(0, -0.4, 0)
+			Hats.Hat3.Handle.Attachment.Rotation = Vector3.new(58, 30, -15)
+			Hats.Hat7.Handle.Attachment.Rotation = Vector3.new(58, -30, 15)
+			Hats.Hat8.Handle.Attachment.Rotation = Vector3.new(88, 30, -15)
+			Hats.Hat5.Handle.Attachment.Rotation = Vector3.new(88, -30, 15)
+			Hats.Hat4.Handle.Attachment.Rotation = Vector3.new(148, -30, 15)
+			Hats.Hat6.Handle.Attachment.Rotation = Vector3.new(148, 30, -15)
+			--//^ Hats ^//--
+	
+	
+	
+	
+			wait(.1)
+			Character:WaitForChild("Torso").Attachment1.Position = Vector3.new(0, -0.5, 0)
+			Hats.Hat3.Handle.Attachment.Rotation = Vector3.new(60, 30, -15)
+			Hats.Hat7.Handle.Attachment.Rotation = Vector3.new(60, -30, 15)
+			Hats.Hat8.Handle.Attachment.Rotation = Vector3.new(90, 30, -15)
+			Hats.Hat5.Handle.Attachment.Rotation = Vector3.new(90, -30, 15)
+			Hats.Hat4.Handle.Attachment.Rotation = Vector3.new(150, -30, 15)
+			Hats.Hat6.Handle.Attachment.Rotation = Vector3.new(150, 30, -15)
+			--//^ Hats ^//--
+	
+	
+	
+	
+			--Character:WaitForChild("Left Arm").Attachment2.Position = Vector3.new(15, 0, 0)
+	
+	
+			wait(.1)
+			Character:WaitForChild("Torso").Attachment1.Position = Vector3.new(0, -0.5, 0)
+			Hats.Hat3.Handle.Attachment.Rotation = Vector3.new(60, 30, -15)
+			Hats.Hat7.Handle.Attachment.Rotation = Vector3.new(60, -30, 15)
+			Hats.Hat8.Handle.Attachment.Rotation = Vector3.new(90, 30, -15)
+			Hats.Hat5.Handle.Attachment.Rotation = Vector3.new(90, -30, 15)
+			Hats.Hat4.Handle.Attachment.Rotation = Vector3.new(150, -30, 15)
+			Hats.Hat6.Handle.Attachment.Rotation = Vector3.new(150, 30, -15)
+			--//^ Hats ^//--
+	
+	
+	
+	
+			wait(.1)
+			Character:WaitForChild("Torso").Attachment1.Position = Vector3.new(0, -0.4, 0)
+			Hats.Hat3.Handle.Attachment.Rotation = Vector3.new(58, 30, -15)
+			Hats.Hat7.Handle.Attachment.Rotation = Vector3.new(58, -30, 15)
+			Hats.Hat8.Handle.Attachment.Rotation = Vector3.new(88, 30, -15)
+			Hats.Hat5.Handle.Attachment.Rotation = Vector3.new(88, -30, 15)
+			Hats.Hat4.Handle.Attachment.Rotation = Vector3.new(148, -30, 15)
+			Hats.Hat6.Handle.Attachment.Rotation = Vector3.new(148, 30, -15)
+			--//^ Hats ^//--
+	
+	
+	
+	
+			wait(.1)
+			Character:WaitForChild("Torso").Attachment1.Position = Vector3.new(0, -0.3, 0)
+			Hats.Hat3.Handle.Attachment.Rotation = Vector3.new(56, 30, -15)
+			Hats.Hat7.Handle.Attachment.Rotation = Vector3.new(56, -30, 15)
+			Hats.Hat8.Handle.Attachment.Rotation = Vector3.new(86, 30, -15)
+			Hats.Hat5.Handle.Attachment.Rotation = Vector3.new(86, -30, 15)
+			Hats.Hat4.Handle.Attachment.Rotation = Vector3.new(146, -30, 15)
+			Hats.Hat6.Handle.Attachment.Rotation = Vector3.new(146, 30, -15)
+			--//^ Hats ^//--
+	
+	
+	
+	
+			wait(.1)
+			Character:WaitForChild("Torso").Attachment1.Position = Vector3.new(0, -0.2, 0)
+			Character:WaitForChild("Torso").Attachment1.Position = Vector3.new(0, -0.2, 0)
+			Hats.Hat3.Handle.Attachment.Rotation = Vector3.new(54, 30, -15)
+			Hats.Hat7.Handle.Attachment.Rotation = Vector3.new(54, -30, 15)
+			Hats.Hat8.Handle.Attachment.Rotation = Vector3.new(84, 30, -15)
+			Hats.Hat5.Handle.Attachment.Rotation = Vector3.new(84, -30, 15)
+			Hats.Hat4.Handle.Attachment.Rotation = Vector3.new(144, -30, 15)
+			Hats.Hat6.Handle.Attachment.Rotation = Vector3.new(144, 30, -15)
+			--//^ Hats ^//--
+	
+	
+	
+	
+			wait(.1)
+			Character:WaitForChild("Torso").Attachment1.Position = Vector3.new(0, -0.1, 0)
+			--Hats.Hat3.Handle.Attachment.Rotation:Lerp(Vector3.new(50, 30, -15),0.5)
+			Hats.Hat3.Handle.Attachment.Rotation = Vector3.new(52, 30, -15)
+			Hats.Hat7.Handle.Attachment.Rotation = Vector3.new(52, -30, 15)
+			Hats.Hat8.Handle.Attachment.Rotation = Vector3.new(82, 30, -15)
+			Hats.Hat5.Handle.Attachment.Rotation = Vector3.new(82, -30, 15)
+			Hats.Hat4.Handle.Attachment.Rotation = Vector3.new(142, -30, 15)
+			Hats.Hat6.Handle.Attachment.Rotation = Vector3.new(142, 30, -15)
+			--//^ Hats ^//--
+	
+	
+	
+	
+			wait(.1)
+			Character:WaitForChild("Torso").Attachment1.Position = Vector3.new(0, -0.1, 0)
+			--Hats.Hat3.Handle.Attachment.Rotation:Lerp(Vector3.new(50, 30, -15),0.5)
+			Hats.Hat3.Handle.Attachment.Rotation = Vector3.new(50, 30, -15)
+			Hats.Hat7.Handle.Attachment.Rotation = Vector3.new(50, -30, 15)
+			Hats.Hat8.Handle.Attachment.Rotation = Vector3.new(80, 30, -15)
+			Hats.Hat5.Handle.Attachment.Rotation = Vector3.new(80, -30, 15)
+			Hats.Hat4.Handle.Attachment.Rotation = Vector3.new(140, -30, 15)
+			Hats.Hat6.Handle.Attachment.Rotation = Vector3.new(140, 30, -15)
+			--//^ Hats ^//--
+	
+	
+	
+	
+		end
+	
+	
+	
+	end
+	
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		FEScript()
+	end)
+end
+coroutine.wrap(XOOHJF_fake_script)()
+local function RTAKMV_fake_script() -- ImageButton.LocalScript 
+	local script = Instance.new('LocalScript', ImageButton)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
+
+	script.Parent.Parent.TextLabel.Visible = true
+	local function tweentransparency1()
+		local Info = TweenInfo.new(0.25)
+		local Tween = game:GetService("TweenService"):Create(script.Parent.Parent.TextLabel,Info,{BackgroundTransparency=1})
+		Tween:Play()
+	end
+	
+	
+	local function tweentransparency0()
+		local Info = TweenInfo.new(0.25)
+		local Tween = game:GetService("TweenService"):Create(script.Parent.Parent.TextLabel,Info,{BackgroundTransparency=0})
+		Tween:Play()
+	end
+	
+	local Description = false
+	local oldtext = script.Parent.Parent.Text
+	script.Parent.MouseButton1Down:Connect(function()
+		if Description == false then
+			Description = true
+			tweentransparency0()
+		elseif Description == true then
+			Description = false
+			tweentransparency1()
+			wait(2)
+		end
+	end)
+end
+coroutine.wrap(RTAKMV_fake_script)()
+local function WQKPMDZ_fake_script() -- TextLabel_4.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_4)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
+
+	while true do
+		wait()
+		script.Parent.TextTransparency = script.Parent.BackgroundTransparency
+	end
+end
+coroutine.wrap(WQKPMDZ_fake_script)()
+-- Button.Script is disabled.
+local function HBKTM_fake_script() -- Content.Main Handler 
+	local script = Instance.new('LocalScript', Content)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
+
+	local TweenService = game:GetService("TweenService")
+	
+	local Holder = script.Parent:WaitForChild("Holder")
+	local Circle = Holder:WaitForChild("Circle")
+	local Mini = Circle:WaitForChild("Mini")
+	
+	local Button = Holder:WaitForChild("Button")
+	
+	local function setToggle(request)
+		local Duration = 0.25
+		local Style = Enum.EasingStyle.Sine
+		local Direction = Enum.EasingDirection.Out
+		local RepeatCount = 0
+		local Reverse = false
+		local TweenDelay = 0
+		local AnimateInfo = TweenInfo.new(Duration, Style, Direction, RepeatCount, Reverse, TweenDelay)
+		
+		if request == true then
+			local Holder_Open = TweenService:Create(Holder, AnimateInfo, {BackgroundColor3 = Color3.new(0, 0.847059, 0.337255)})
+			local Circle_Open = TweenService:Create(Circle, AnimateInfo, {Position = UDim2.new(1, 0, 0.5, 0), AnchorPoint = Vector2.new(1, 0.5)})
+			local Mini_Open = TweenService:Create(Mini, AnimateInfo, {BackgroundColor3 = Color3.new(1, 1, 1)})
+			
+			Holder_Open:Play()
+			Circle_Open:Play()
+			Mini_Open:Play()
+		elseif request == false then
+			local Holder_Close = TweenService:Create(Holder, AnimateInfo, {BackgroundColor3 = Color3.new(0.235294, 0.235294, 0.235294)})
+			local Circle_Close = TweenService:Create(Circle, AnimateInfo, {Position = UDim2.new(0, 0, 0.5, 0), AnchorPoint = Vector2.new(0, 0.5)})
+			local Mini_Close = TweenService:Create(Mini, AnimateInfo, {BackgroundColor3 = Color3.new(0.235294, 0.235294, 0.235294)})
+			
+			Holder_Close:Play()
+			Circle_Close:Play()
+			Mini_Close:Play()
+		else
+			warn("Wrong request.")
+		end
+	end
+	
+	
+	local Cooldown = false
+	local isOpen = false
+	Button.MouseButton1Click:Connect(function()
+		if not Cooldown then
+			Cooldown = true
+			
+			if not isOpen then
+				setToggle(true)
+				-- Logic here
+				
+				isOpen = true
+				--require(script.Parent.Holder.Button.MainModule):CV(game.Players.LocalPlayer.Name, "MatureContent")
+			else
+				setToggle(false)
+				--Logic here
+				
+				isOpen = false
+				--require(script.Parent.Holder.Button.MainModule):CV(game.Players.LocalPlayer.Name, "MatureContent")
+			end
+			
+			
+			wait(1) -- Wait n Seconds till the animation will proceed
+			Cooldown = false
+		end
+	end)
+end
+coroutine.wrap(HBKTM_fake_script)()
+local function RSBZVQ_fake_script() -- Frame.Dragify 
+	local script = Instance.new('LocalScript', Frame)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
+
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+	    dragToggle = nil
+	    local dragSpeed = 0.50
+	    dragInput = nil
+	    dragStart = nil
+	    local dragPos = nil
+	    function updateInput(input)
+	        local Delta = input.Position - dragStart
+	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+	        game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.30), {Position = Position}):Play()
+	    end
+	    Frame.InputBegan:Connect(function(input)
+	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+	            dragToggle = true
+	            dragStart = input.Position
+	            startPos = Frame.Position
+	            input.Changed:Connect(function()
+	                if input.UserInputState == Enum.UserInputState.End then
+	                    dragToggle = false
+	                end
+	            end)
+	        end
+	    end)
+	    Frame.InputChanged:Connect(function(input)
+	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	            dragInput = input
+	        end
+	    end)
+	    game:GetService("UserInputService").InputChanged:Connect(function(input)
+	        if input == dragInput and dragToggle then
+	            updateInput(input)
+	        end
+	    end)
+	end
+	
+	dragify(script.Parent)
+end
+coroutine.wrap(RSBZVQ_fake_script)()
