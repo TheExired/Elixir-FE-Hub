@@ -1,3 +1,11 @@
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+	Title = "Elixir FE Hub";
+	Text = "Loaded!";
+	Icon = "http://www.roblox.com/asset/?id=8537213922"})
+Duration = 2;
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TheExired/Elixir-FE-Hub/main/Elixir%20FE%20Hub"))()
+
 
 
 local player = game.Players.LocalPlayer
