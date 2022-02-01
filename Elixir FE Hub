@@ -1,5 +1,4 @@
 
-
 local player = game.Players.LocalPlayer
 
 repeat
