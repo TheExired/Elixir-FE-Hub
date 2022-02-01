@@ -1,9 +1,5 @@
 
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/TheExired/Elixir-FE-Hub/main/Elixir%20FE%20Hub"))()
-
-
-
 local player = game.Players.LocalPlayer
 
 repeat
@@ -3322,7 +3318,271 @@ Handle2weld.C0=clerp(Handle2weld.C0,cf(0,0,0)*angles(math.rad(0),math.rad(0),mat
 end
 
 
+local function Randomizer()
+	wait(2)
 
+
+
+
+	local unanchoredparts = {}
+	local movers = {}
+	local toggle = true
+	local move = false
+	local Player = game:GetService("Players").LocalPlayer
+	local Character = Player.Character
+	local mov = {};
+	local mov2 = {};
+
+
+	--//Renaming//--
+	repeat wait() until Character:FindFirstChild("MeshPartAccessory")
+
+	Character["MeshPartAccessory"].Name = "Sword1"
+	Character["MeshPartAccessory"].Name = "Sword2"
+	Character["MeshPartAccessory"].Name = "Sword3"
+	Character["MeshPartAccessory"].Name = "Sword4"
+
+
+
+
+	--//Settings//--
+
+	FlingStrength = 16000
+
+	game:GetService("RunService").RenderStepped:Connect(function()
+		Character.Head.CanCollide = false
+		Character.Torso.CanCollide = false
+		Character.HumanoidRootPart.CanCollide = false
+
+	end)
+
+	local runservice = game:GetService("RunService")
+
+
+
+
+
+
+	local Hats = {Hat1  = Character:WaitForChild("Evil Aura"),
+		Hat2  = Character:WaitForChild("Sword1"), 
+		Hat3  = Character:WaitForChild("Sword2"), 
+		Hat4  = Character:WaitForChild("Sword3"), 
+		Hat5  = Character:WaitForChild("Sword4"), 
+		Hat6  = Character:WaitForChild("ShadowBladeMasterAccessory"), 
+		Hat7  = Character:WaitForChild("BladeMasterAccessory"), 
+	}
+
+
+	--Dont touch below
+
+	for i,v in next, Hats do
+
+		v.Handle.AccessoryWeld:Remove()
+	end
+
+	function ftp(str)
+		local pt = {};
+		if str ~= 'me' and str ~= 'random' then
+			for i, v in pairs(game.Players:GetPlayers()) do
+				if v.Name:lower():find(str:lower()) then
+					table.insert(pt, v);
+				end
+			end
+		elseif str == 'me' then
+			table.insert(pt, Player);
+		elseif str == 'random' then
+			table.insert(pt, game.Players:GetPlayers()[math.random(1, #game.Players:GetPlayers())]);
+		end
+		return pt;
+	end
+
+	local function align(i,v)
+		local att0 = Instance.new("Attachment", i)
+		att0.Position = Vector3.new(0,0,0)
+		local att1 = Instance.new("Attachment", v)
+		att1.Position = Vector3.new(0,0,0)
+		local AP = Instance.new("AlignPosition", i)
+		AP.Attachment0 = att0
+		AP.Attachment1 = att1
+		AP.RigidityEnabled = false
+		AP.ReactionForceEnabled = false
+		AP.ApplyAtCenterOfMass = false
+		AP.MaxForce = 9999999
+		AP.MaxVelocity = math.huge
+		AP.Responsiveness = 65
+		local AO = Instance.new("AlignOrientation", i)
+		AO.Attachment0 = att0
+		AO.Attachment1 = att1
+		AO.ReactionTorqueEnabled = false
+		AO.PrimaryAxisOnly = false
+		AO.MaxTorque = 9999999
+		AO.MaxAngularVelocity = math.huge
+		AO.Responsiveness = 50
+	end
+
+
+	local function limbalign(i,v)
+		local att0 = Instance.new("Attachment", i)
+		att0.Position = Vector3.new(0,0,0)
+		att0.Name = "att0"
+		local att1 = Instance.new("Attachment", v)
+		att1.Name = "att1"
+		att1.Position = Vector3.new(0,0,0)
+		local AP = Instance.new("AlignPosition", i)
+		AP.Attachment0 = att0
+		AP.Attachment1 = att1
+		AP.RigidityEnabled = false
+		AP.ReactionForceEnabled = false
+		AP.ApplyAtCenterOfMass = false
+		AP.MaxForce = 9999999
+		AP.MaxVelocity = math.huge
+		AP.Responsiveness = 65
+		local AO = Instance.new("AlignOrientation", i)
+		AO.Attachment0 = att0
+		AO.Attachment1 = att1
+		AO.ReactionTorqueEnabled = false
+		AO.PrimaryAxisOnly = false
+		AO.MaxTorque = 9999999
+		AO.MaxAngularVelocity = math.huge
+		AO.Responsiveness = 50
+	end
+
+
+	--Dont touch above
+
+	--Character Modelling
+
+
+
+	align(Hats.Hat1.Handle, Character["Head"])
+	align(Hats.Hat2.Handle, Character["Head"])
+	align(Hats.Hat3.Handle, Character["Head"])
+	align(Hats.Hat4.Handle, Character["Head"])
+	align(Hats.Hat5.Handle, Character["Head"])
+	align(Hats.Hat6.Handle, Character["Head"])
+	align(Hats.Hat7.Handle, Character["Head"])
+
+	--[Hats that won't be converted] ^
+	Hats.Hat7.Handle.Attachment.Position = Vector3.new(1,2,3)
+	Hats.Hat6.Handle.Attachment.Position = Vector3.new(2,1,3)
+	Hats.Hat5.Handle.Attachment.Position = Vector3.new(3,2,1)
+	Hats.Hat4.Handle.Attachment.Position = Vector3.new(1,3,2)
+	Hats.Hat3.Handle.Attachment.Position = Vector3.new(3,1,2)
+	Hats.Hat2.Handle.Attachment.Position = Vector3.new(5,2,1)
+	Hats.Hat1.Handle.Attachment.Position = Vector3.new(1,2,5)
+
+
+	--	align(Hats.Hat2.Handle, Character["Torso"])
+	--	align(Hats.Hat3.Handle, Character["Torso"])
+
+
+	--End of Character Modelling
+
+	Hats.Hat1.Handle.Attachment.Rotation = Vector3.new(0, 15, 90) 
+	Hats.Hat2.Handle.Attachment.Rotation = Vector3.new(15, 90, 0)
+	Hats.Hat3.Handle.Attachment.Rotation = Vector3.new(90, 0, 15)
+	Hats.Hat4.Handle.Attachment.Rotation = Vector3.new(0, 15, 90)
+	Hats.Hat5.Handle.Attachment.Rotation = Vector3.new(15,90, 0) -- 90, -180, 0
+	Hats.Hat6.Handle.Attachment.Rotation = Vector3.new(90, 0, 15)
+	Hats.Hat7.Handle.Attachment.Rotation = Vector3.new(15,0, 90)
+
+	--Character:WaitForChild("Torso"):FindFirstChild("Attachment").Name = "Attachment1" -- make a new attachment to
+	--Character:WaitForChild("Left Arm"):FindFirstChild("Attachment").Name = "Attachment2"
+	--Character:WaitForChild("Torso"):FindFirstChild("Attachment").Name = "Attachment2" 
+	--Character:WaitForChild("Torso"):FindFirstChild("Attachment").Name = "Attachment3" 
+
+
+	--Character:WaitForChild("Torso").Attachment1.Position = Vector3.new(0, 0, 0)
+	--Character:WaitForChild("Torso").Attachment2.Position = Vector3.new(0, 0, 0)
+	--Character:WaitForChild("Torso").Attachment3.Position = Vector3.new(0, 0, 0)
+
+	-- the mid value is up or down it depends it goes down if u have a minus infront of it and up if u dont
+	-- the last value is forwards or backwards if u put a minus infront of it it goes forward and if u remove the minus it goes backwards
+	-- the first value is to the side if u dont have minus and to the other side if u have minus im bad at explaining lol
+	--Character:WaitForChild("Torso").Attachment1.Position = Vector3.new(-0, 0, -0) -- position of hat2
+	-- Position or Rotation
+
+
+	local blacklisted="Head Torso HumanoidRootPart";
+	local limbs={};
+
+	--for i,v in next,Character:children() do
+	--	if (v.ClassName=="Part") and not blacklisted:find(v.Name) then
+	--		v:BreakJoints();
+	--		table.insert(limbs,v);
+	--	end
+	--end
+
+	game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(KeyPressed)
+		if KeyPressed ==  Enum.KeyCode.F then -- key to play animation
+
+			if toggle == false then
+
+				--Character:WaitForChild("Torso").Attachment1.Position = Vector3.new(0,0,0) 	-- normal value  -- Position or Rotation
+				toggle = true
+			else
+
+				toggle = false
+			end
+		elseif KeyPressed == "N" then
+			Character["Left Arm"]:BreakJoints();
+			while game:GetService("RunService")["Heartbeat"]:Wait() do
+				Character["Left Arm"].CFrame = Character["Left Arm"].CFrame*CFrame.new(0,Character["Left Arm"].CFrame*2,0);
+			end
+			--Hats.Hat10.Handle.Position = game.Players.LocalPlayer:GetMouse().Hit.p + Vector3.new(0,2,0)
+			--temp.Position = game.Players.LocalPlayer:GetMouse().Hit.p + Vector3.new(0,2,0)
+		end
+	end)
+
+	--//Character Rigging//--
+
+
+	--limbalign(Character["Right Leg"],Character["Torso"])
+	----Character["Right Leg"].att0.Position = Vector3.new(-0.3, 1.45, 1)
+	--Character["Right Leg"].att0.Rotation = Vector3.new(15,15,0)
+
+	--limbalign(Character["Left Leg"],Character["Torso"])
+	--Character["Left Leg"].att0.Position = Vector3.new(0.5, 1.8, 0.6)
+	--Character["Left Leg"].att0.Rotation = Vector3.new(15,-15,0)
+
+	--limbalign(Character["Left Arm"],Character["Torso"])
+	--Character["Left Arm"].att0.Position = Vector3.new(1.119, 1.863, 0.164)
+	--Character["Left Arm"].att0.Rotation = Vector3.new(-132,-27,-9.6)
+
+	--limbalign(Character["Right Arm"],Character["Torso"])
+	--Character["Right Arm"].att0.Position = Vector3.new(-1.509, 0.004, -0.032)
+	---Character["Right Arm"].att0.Rotation = Vector3.new(16,13,0)
+
+	--limbalign(Character["Torso"],Character["HumanoidRootPart"])
+	--Character["Torso"].att0.Position = Vector3.new(0,5,0)
+	--Character["Torso"].att0.Rotation = Vector3.new(0,0,0)
+
+
+
+	--//Player Animations//--
+
+
+	while true do
+		wait(0.1)
+		Hats.Hat1.Handle.Attachment.CFrame = Hats.Hat1.Handle.Attachment.CFrame * CFrame.Angles(math.random(-9,9),math.random(-9,9),math.random(-9,9))
+		Hats.Hat2.Handle.Attachment.CFrame = Hats.Hat2.Handle.Attachment.CFrame * CFrame.Angles(math.random(-9,9),math.random(-9,9),math.random(-9,9))
+		Hats.Hat3.Handle.Attachment.CFrame = Hats.Hat3.Handle.Attachment.CFrame * CFrame.Angles(math.random(-9,9),math.random(-9,9),math.random(-9,9))
+		Hats.Hat4.Handle.Attachment.CFrame = Hats.Hat4.Handle.Attachment.CFrame * CFrame.Angles(math.random(-9,9),math.random(-9,9),math.random(-9,9))
+		Hats.Hat5.Handle.Attachment.CFrame = Hats.Hat5.Handle.Attachment.CFrame * CFrame.Angles(math.random(-9,9),math.random(-9,9),math.random(-9,9))
+		Hats.Hat6.Handle.Attachment.CFrame = Hats.Hat6.Handle.Attachment.CFrame * CFrame.Angles(math.random(-9,9),math.random(-9,9),math.random(-9,9))
+		Hats.Hat7.Handle.Attachment.CFrame = Hats.Hat7.Handle.Attachment.CFrame * CFrame.Angles(math.random(-9,9),math.random(-9,9),math.random(-9,9))
+		--Hats.Hat2.Handle.Attachment.Rotation = Hats.Hat2.Handle.Attachment.Rotation + Vector3.new(0, 5, -0)
+
+		--Hats.Hat2.Handle.Attachment.Rotation = Hats.Hat2.Handle.Attachment.Rotation + Vector3.new(0, 5, -0)
+		--Hats.Hat3.Handle.Attachment.Rotation = Hats.Hat3.Handle.Attachment.Rotation + Vector3.new(0, 5, -0)
+		--Hats.Hat4.Handle.Attachment.Rotation = Hats.Hat4.Handle.Attachment.Rotation + Vector3.new(0, 5, -0)
+		--Hats.Hat5.Handle.Attachment.Rotation = Hats.Hat5.Handle.Attachment.Rotation + Vector3.new(0, 5, -0)
+
+	end
+
+
+
+end
 
 
 
@@ -3872,7 +4132,30 @@ ravenger.MouseButton1Down:Connect(function()
 end)
 
 
+--//Randomizer//--
 
+local randomizer = Instance.new("TextButton")
+randomizer.Size = UDim2.new(0.857,0,0.05,0)
+randomizer.Name = "Randomizer"
+randomizer.Position = UDim2.new(0.011,0,0,0)
+randomizer.ZIndex = 2
+randomizer.BackgroundColor3 = Color3.new(0.235294, 0.235294, 0.235294)
+randomizer.BorderSizePixel = 0
+randomizer.BackgroundTransparency = 0
+randomizer.Text = "Randomizer"
+randomizer.TextColor3 = Color3.new(1,1,1)
+randomizer.TextScaled = true
+--settingsbutton.TextSize = 20
+randomizer.RichText = true
+randomizer.Parent = scrollframe
+
+local uicorner3 = Instance.new("UICorner")
+uicorner3.CornerRadius = UDim.new(0, 8)
+uicorner3.Parent = randomizer
+
+randomizer.MouseButton1Down:Connect(function()
+	Randomizer()
+end)
 
 
 
