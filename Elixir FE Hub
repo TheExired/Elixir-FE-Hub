@@ -4452,6 +4452,7 @@ local function Helicopter()
 
 
 
+
 	wait(2)
 
 
@@ -4473,10 +4474,10 @@ local function Helicopter()
 	BV.Velocity = Vector3.new(0,0,0)
 	local flying = false
 	local eq = false
-
-
-
-
+	local blades = Instance.new("Sound", Character.HumanoidRootPart)
+	blades.SoundId = "rbxassetid://4057576577"
+	blades.Looped = true
+	blades.Name = "HelicopterBlades"
 
 
 
@@ -4677,9 +4678,11 @@ local function Helicopter()
 			if toggle == false then
 				flightenabled = true
 				toggle = true
+				blades:Play()
 			else
 				flightenabled = false
 				toggle = false
+				blades:Stop()
 			end
 		elseif key == "b" then
 			if bombing == false then
@@ -4713,12 +4716,14 @@ local function Helicopter()
 					BV.MaxForce = Vector3.new(0,math.huge,0)
 					BV.Velocity = Vector3.new(0,0,0)
 					Character.Humanoid.WalkSpeed = 80
+
 				end
 			elseif flying == true then
 				flying = false
 				BV.MaxForce = Vector3.new(0,0,0)
 				BV.Velocity = Vector3.new(0,0,0)
 				Character.Humanoid.WalkSpeed = 16
+
 			end
 
 		elseif key == "e" then
@@ -4794,6 +4799,9 @@ local function Helicopter()
 
 
 	end
+
+
+
 
 
 
@@ -4950,7 +4958,7 @@ title.ZIndex = 1
 title.BackgroundColor3 = Color3.new(0.235294, 0.235294, 0.235294)
 title.BorderSizePixel = 0
 title.BackgroundTransparency = 1
-title.Text = "Elixir FE Hub - V1.6.2"
+title.Text = "Elixir FE Hub - V1.5.1"
 title.Font = Enum.Font.Highway
 title.TextColor3 = Color3.new(1, 1, 1)
 title.TextSize = 20
