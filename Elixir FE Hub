@@ -3586,6 +3586,7 @@ end
 
 local function Helicopter()
 
+	wait(2)
 
 
 
@@ -3637,7 +3638,9 @@ local function Helicopter()
 
 	local runservice = game:GetService("RunService")
 
-
+	if Character:FindFirstChild("Divine Aura") then
+		Character["Divine Aura"].Name = "Evil Aura"
+	end
 
 
 
@@ -3839,6 +3842,8 @@ local function Helicopter()
 
 				align(Hats.Hat8.Handle, Character["Left Arm"])
 				align(Hats.Hat9.Handle, Character["Right Arm"])
+				Hats.Hat8.Handle.Attachment.Rotation = Vector3.new(-90, 0, 0)
+				Hats.Hat9.Handle.Attachment.Rotation = Vector3.new(-90, 0, 0)
 				bombing = false
 			end
 		elseif key == "f" then
@@ -3931,9 +3936,6 @@ local function Helicopter()
 
 
 	end
-
-
-
 
 
 
@@ -4359,7 +4361,99 @@ local function Reanimate()
 
 end
 
+local function RavengerHats()
+	local Player = game:GetService("Players").LocalPlayer
+	local Character = Player.Character
 
+
+	--//Renaming//--
+	repeat wait() until Character:FindFirstChild("MeshPartAccessory")
+
+	Character["MeshPartAccessory"].Name = "Sword1"
+	Character["MeshPartAccessory"].Name = "Sword2"
+	Character["MeshPartAccessory"].Name = "Sword3"
+
+	local Hats = {
+		Hat1  = Character:WaitForChild("Sword1"), 
+		Hat2  = Character:WaitForChild("Sword2"), 
+		Hat3  = Character:WaitForChild("Sword3"), 
+	}
+
+
+	Hats.Hat1.Handle.SpecialMesh:Destroy()
+	Hats.Hat2.Handle.SpecialMesh:Destroy()
+	Hats.Hat3.Handle.SpecialMesh:Destroy()
+
+	repeat wait() until Character:FindFirstChild("Model")
+	Character.Model.Name = "bob"
+	Character.Model.Name = "Modele"
+
+	local child = Character:GetChildren()
+	for i = 1, #child do
+		if child[i]:IsA("Model") then
+			local bhild = child[i]:GetChildren()
+			if bhild[i] then
+				Character.Modele.Handle.Name = "Handle1"
+				Character.Modele.Handle.Name = "Handle2"
+				Character.Modele.Handle.Name = "Handle3"
+				--else
+				--child[i]:Destroy()
+			end
+		end
+	end
+
+
+
+
+
+
+
+
+	local Count = 1
+	function Align(Part0,Part1,Position,Angle)
+		local AlignPos = Instance.new('AlignPosition', Part1); AlignPos.Name = "AliP_"..Count
+		AlignPos.ApplyAtCenterOfMass = true;
+		AlignPos.MaxForce = 5772000--67752;
+		AlignPos.MaxVelocity = math.huge/9e110;
+		AlignPos.ReactionForceEnabled = false;
+		AlignPos.Responsiveness = 200;
+		AlignPos.RigidityEnabled = false;
+		local AlignOri = Instance.new('AlignOrientation', Part1); AlignOri.Name = "AliO_"..Count
+		AlignOri.MaxAngularVelocity = math.huge/9e110;
+		AlignOri.MaxTorque = 5772000
+		AlignOri.PrimaryAxisOnly = false;
+		AlignOri.ReactionTorqueEnabled = false;
+		AlignOri.Responsiveness = 200;
+		AlignOri.RigidityEnabled = false;
+		local AttachmentA=Instance.new('Attachment',Part1); AttachmentA.Name = "AthP_"..Count
+		local AttachmentB=Instance.new('Attachment',Part0); AttachmentB.Name = "AthP_"..Count
+		local AttachmentC=Instance.new('Attachment',Part1); AttachmentC.Name = "AthO_"..Count
+		local AttachmentD=Instance.new('Attachment',Part0); AttachmentD.Name = "AthO_"..Count
+		AttachmentC.Orientation = Angle
+		AttachmentA.Position = Position
+		AlignPos.Attachment1 = AttachmentA;
+		AlignPos.Attachment0 = AttachmentB;
+		AlignOri.Attachment1 = AttachmentC;
+		AlignOri.Attachment0 = AttachmentD;
+		Count = Count + 1
+	end
+
+
+
+	Hats.Hat1.Handle.AccessoryWeld:Destroy()
+	Hats.Hat2.Handle.AccessoryWeld:Destroy()
+	Hats.Hat3.Handle.AccessoryWeld:Destroy()
+
+
+
+
+	Align(Hats.Hat1.Handle,Player.Character.Modele.Handle1,Vector3.new(0,0,0),Vector3.new(0,0,0))
+	Align(Hats.Hat2.Handle,Player.Character.Modele.Handle2,Vector3.new(0,0,0),Vector3.new(0,0,0))
+	Align(Hats.Hat3.Handle,Player.Character.Modele.Handle3,Vector3.new(0,0,0),Vector3.new(0,90,0))
+
+	
+
+end
 
 
 
@@ -4940,6 +5034,35 @@ uicorner3.Parent = ravenger
 ravenger.MouseButton1Down:Connect(function()
 	Ravenger()
 end)
+
+--//Ravenger Claws V2 Paid//--
+
+local ravengerhats = Instance.new("TextButton")
+ravengerhats.Size = UDim2.new(0.857,0,0.05,0)
+ravengerhats.Name = "RavengerPaid"
+ravengerhats.Position = UDim2.new(0.011,0,0,0)
+ravengerhats.ZIndex = 2
+ravengerhats.BackgroundColor3 = Color3.new(0.192157, 0.192157, 0.231373)
+ravengerhats.BorderSizePixel = 0
+ravengerhats.BackgroundTransparency = 0
+ravengerhats.Text = "Ravenger Claws V2 (Paid)"
+ravengerhats.TextColor3 = Color3.new(1,1,1)
+ravengerhats.TextScaled = true
+--settingsbutton.TextSize = 20
+ravengerhats.RichText = true
+ravengerhats.Parent = scrollframe
+
+local uicorner6 = Instance.new("UICorner")
+uicorner6.CornerRadius = UDim.new(0, 8)
+uicorner6.Parent = ravengerhats
+
+ravengerhats.MouseButton1Down:Connect(function()
+	RavengerHats()
+end)
+
+
+
+
 
 
 --//Randomizer//--
