@@ -1844,29 +1844,29 @@ end
 
 closez.MouseButton1Down:Connect(function()
 	
-	if closed == false then
+	if closed == true then
 		if keye == true then
 			main.Visible = true
 			sidebar.Visible = true
 			tabsholder.Visible = true
 			keyframe.Visible = false
 			closez.Text = "+"
-			closed = true
+			closed = false
 		elseif keye == false then
 			main.Visible = true
 			sidebar.Visible = false
 			tabsholder.Visible = false
 			keyframe.Visible = true
 			closez.Text = "+"
-			closed = true
+			closed = false
 			end
-	elseif closed == true then
+	elseif closed == false then
 			main.Visible = false
 			sidebar.Visible = false
 			tabsholder.Visible = false
 			keyframe.Visible = false
 			closez.Text = "-"
-			closed = false
+			closed = true
 		end
 end)
 
