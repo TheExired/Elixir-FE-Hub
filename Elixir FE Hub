@@ -11,7 +11,7 @@ if gui:FindFirstChild("ElixirFEHub") then
 	gui.ElixirFEHub:Destroy()
 end
 local closed = false
-
+local keye = false
 
 --//Script Functions//--
 local function Ravenger()
@@ -1336,7 +1336,7 @@ title.ZIndex = 1
 title.BackgroundColor3 = Color3.new(0.235294, 0.235294, 0.235294)
 title.BorderSizePixel = 0
 title.BackgroundTransparency = 1
-title.Text = "Elixir FE Hub - V1.7.3"
+title.Text = "Elixir FE Hub - V1.9.5"
 title.Font = Enum.Font.Highway
 title.TextColor3 = Color3.new(1, 1, 1)
 title.TextSize = 20
@@ -1685,15 +1685,115 @@ uilist3.Padding = UDim.new(0,2)
 uilist3.Parent = scrollframe3
 
 
+------//  |
+-----//   |
+----//    |   KEY
+---//     |
+--//      |
 
 
+local keyframe = Instance.new("Frame")
+keyframe.Size = UDim2.new(1,0,0.909,0)
+keyframe.Name = "Key"
+keyframe.Position = UDim2.new(0,0,0.091,0)
+keyframe.ZIndex = 0
+keyframe.BackgroundColor3 = Color3.new(0.172549, 0.172549, 0.2)
+keyframe.BorderSizePixel = 0
+keyframe.Parent = base
+
+local uicorner1591 = Instance.new("UICorner")
+uicorner1591.CornerRadius = UDim.new(0, 8)
+uicorner1591.Parent = keyframe
+
+local textkey = Instance.new("TextLabel")
+textkey.Size = UDim2.new(0.773,0,0.156,0)
+textkey.Name = "Text"
+textkey.Position = UDim2.new(0.112,0,0.213,0)
+textkey.ZIndex = 1
+textkey.BackgroundColor3 = Color3.new(0.235294, 0.235294, 0.235294)
+textkey.BorderSizePixel = 0
+textkey.BackgroundTransparency = 1
+textkey.Text = "Please enter the key located in the Discord server here."
+textkey.Font = Enum.Font.ArialBold
+textkey.TextColor3 = Color3.new(1, 1, 1)
+textkey.TextSize = 20
+textkey.TextXAlignment = Enum.TextXAlignment.Center
+textkey.TextYAlignment = Enum.TextYAlignment.Top
+textkey.TextWrapped = true
+textkey.RichText = true
+textkey.Parent = keyframe
+
+local disckey = Instance.new("TextLabel")
+disckey.Size = UDim2.new(0.837,0,0.154,0)
+disckey.Name = "Discord"
+disckey.Position = UDim2.new(0.112,0,0.8,0)
+disckey.ZIndex = 1
+disckey.BackgroundColor3 = Color3.new(0.313725, 0.588235, 1)
+disckey.BorderSizePixel = 0
+disckey.BackgroundTransparency = 1
+disckey.Text = "Discord: https://discord.gg/EbGPemwR6D"
+disckey.Font = Enum.Font.ArialBold
+disckey.TextColor3 = Color3.new(0.313725, 0.588235, 1)
+disckey.TextSize = 20
+disckey.TextXAlignment = Enum.TextXAlignment.Center
+disckey.TextYAlignment = Enum.TextYAlignment.Top
+disckey.TextWrapped = true
+disckey.RichText = true
+disckey.Parent = keyframe
+
+local textbox = Instance.new("TextBox")
+textbox.Name = "Key"
+textbox.Size = UDim2.new(0.773,0,0.185,0)
+textbox.Position = UDim2.new(0.112,0,0.403,0)
+textbox.ZIndex = 9
+textbox.BackgroundColor3 = Color3.new(0.105882, 0.105882, 0.133333)
+textbox.Font = Enum.Font.Highway
+textbox.PlaceholderColor3 = Color3.new(0.486275, 0.533333, 0.698039)
+textbox.PlaceholderText = "Please enter the code here."
+textbox.Text = ""
+textbox.TextColor3 = Color3.new(1,1,1)
+textbox.TextScaled = false
+textbox.TextSize = 20
+textbox.TextWrapped = true
+textbox.RichText = true
+textbox.Parent = keyframe
+
+local uicorner1592 = Instance.new("UICorner")
+uicorner1592.CornerRadius = UDim.new(0, 8)
+uicorner1592.Parent = textbox
+
+local confirm = Instance.new("TextButton")
+confirm.Position = UDim2.new(0.373,0,0.617,0)
+confirm.Size = UDim2.new(0.266,0,0.088,0)
+confirm.Font = Enum.Font.Highway
+confirm.Text = "Confirm"
+confirm.Name = "Confirm"
+confirm.ZIndex = 9
+confirm.TextColor3 = Color3.new(1,1,1)
+confirm.BackgroundColor3 = Color3.new(0.105882, 0.105882, 0.133333)
+confirm.Parent = keyframe
+confirm.TextSize = 20
 
 
+local uicorner1593 = Instance.new("UICorner")
+uicorner1593.CornerRadius = UDim.new(0, 8)
+uicorner1593.Parent = confirm
+
+sidebar.Visible = false
+tabsholder.Visible = false
+keyframe.Visible = true
+
+--//Key Scripts//--
 
 
-
-
-
+confirm.MouseButton1Down:Connect(function()
+	if textbox.Text == "ElixirFETestKey" then
+		keye = true
+		sidebar.Visible = true
+		tabsholder.Visible = true
+		keyframe.Visible = false
+	end
+end)
 
 
 
@@ -1743,19 +1843,31 @@ end
 
 
 closez.MouseButton1Down:Connect(function()
+	
 	if closed == false then
-		main.Visible = false
-		sidebar.Visible = false
-		tabsholder.Visible = false
-		closez.Text = "+"
-		closed = true
+		if keye == true then
+			main.Visible = true
+			sidebar.Visible = true
+			tabsholder.Visible = true
+			keyframe.Visible = false
+			closez.Text = "+"
+			closed = true
+		elseif keye == false then
+			main.Visible = true
+			sidebar.Visible = false
+			tabsholder.Visible = false
+			keyframe.Visible = true
+			closez.Text = "+"
+			closed = true
+			end
 	elseif closed == true then
-		main.Visible = true
-		sidebar.Visible = true
-		tabsholder.Visible = true
-		closez.Text = "-"
-		closed = false
-	end
+			main.Visible = false
+			sidebar.Visible = false
+			tabsholder.Visible = false
+			keyframe.Visible = false
+			closez.Text = "-"
+			closed = false
+		end
 end)
 
 
