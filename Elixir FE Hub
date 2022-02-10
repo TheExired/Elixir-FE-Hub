@@ -16,8 +16,8 @@ local keye = false
 --//Script Functions//--
 local function Ravenger()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/TheExired/RavengerClaws/main/RavengerClawsV2"))()
-	
-	
+
+
 end
 
 
@@ -1189,7 +1189,9 @@ local function RavengerHats()
 
 end
 
-
+local function TeapotTurret()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TheExired/TeapotHub/main/TeapotTurret"))()
+end
 
 
 
@@ -1843,7 +1845,7 @@ end
 
 
 closez.MouseButton1Down:Connect(function()
-	
+
 	if closed == true then
 		if keye == true then
 			main.Visible = true
@@ -1859,15 +1861,15 @@ closez.MouseButton1Down:Connect(function()
 			keyframe.Visible = true
 			closez.Text = "+"
 			closed = false
-			end
-	elseif closed == false then
-			main.Visible = false
-			sidebar.Visible = false
-			tabsholder.Visible = false
-			keyframe.Visible = false
-			closez.Text = "-"
-			closed = true
 		end
+	elseif closed == false then
+		main.Visible = false
+		sidebar.Visible = false
+		tabsholder.Visible = false
+		keyframe.Visible = false
+		closez.Text = "-"
+		closed = true
+	end
 end)
 
 
@@ -2050,7 +2052,30 @@ helicopter.MouseButton1Down:Connect(function()
 end)
 
 
+--//Teapot Turret//--
 
+local teapotturret = Instance.new("TextButton")
+teapotturret.Size = UDim2.new(0.857,0,0.05,0)
+teapotturret.Name = "Teapot Turret"
+teapotturret.Position = UDim2.new(0.011,0,0,0)
+teapotturret.ZIndex = 2
+teapotturret.BackgroundColor3 = Color3.new(0.192157, 0.192157, 0.231373)
+teapotturret.BorderSizePixel = 0
+teapotturret.BackgroundTransparency = 0
+teapotturret.Text = "Teapot Turret"
+teapotturret.TextColor3 = Color3.new(1,1,1)
+teapotturret.TextScaled = true
+--settingsbutton.TextSize = 20
+teapotturret.RichText = true
+teapotturret.Parent = scrollframe
+
+local uicorner9 = Instance.new("UICorner")
+uicorner9.CornerRadius = UDim.new(0, 8)
+uicorner9.Parent = teapotturret
+
+teapotturret.MouseButton1Down:Connect(function()
+	TeapotTurret()
+end)
 
 
 
